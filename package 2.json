@@ -1,7 +1,8 @@
 {
-  "name": "passmark.com",
-  "version": "0.1.0",
+  "name": "more-recipes",
+  "version": "1.0.0",
   "private": true,
+  "description": "A Recipe management and sharing app",
   "main": "/server/app.js",
   "scripts": {
     "start": "node ./build-server/app.js",
