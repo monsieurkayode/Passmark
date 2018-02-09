@@ -1,5 +1,8 @@
+@import './_variables.scss';
+
 .App {
   text-align: center;
+  background-color: $color
 }
 
 .App-logo {
@@ -11,7 +14,7 @@
   background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: $color;
 }
 
 .App-title {
@@ -25,4 +28,13 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.banner-header {
+  background-image: url(../../assets/images/banner_Image.svg);
+  height: $banner-header-height;
+}
+
+.banner-header-overlay {
+  position: absolute;
 }
