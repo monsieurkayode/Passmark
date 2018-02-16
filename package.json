@@ -16,7 +16,7 @@
     "test:coverage": "npm run test:client && npm run coveralls",
     "heroku-postbuild": "npm run prod:client && npm run prod:server"
   },
-  "author": "Lawal Lanre Emmanuel",
+  "author": "Passmark Team",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.17.1",

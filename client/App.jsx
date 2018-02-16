@@ -1,19 +1,30 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { PureComponent } from 'react';
+import logo from './assets/images/logo.png';
 
-class App extends Component {
+import './App.scss';
+
+class App extends PureComponent {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          Hello World!
-        </p>
-      </div>
+      <section className="banner">
+        <div className="overlay">
+          <div className="container">
+            <div className="logo-bkg">
+              <img src={logo} alt="" className="flex-img" />
+            </div>
+            <div className="intro-text">
+              <p><span className="text-white">Connect</span> with <span className="text-white">millions
+              </span> of <span className="text-white">tutor</span>, anywhere,
+              anytime.</p>
+            </div>
+            <div className="tutor-btn-bkg">
+              <button className="tutor-btn">
+                GET A TUTOR
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     );
   }
 }
