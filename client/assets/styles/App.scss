@@ -1,40 +1,148 @@
 @import './_variables.scss';
 
-.App {
-  text-align: center;
-  background-color: $color
+body, html {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.banner {
+  background: url(../images/banner_Image.svg) no-repeat center center fixed;
+	margin: 0px 0px 15px 0px !important;
+  background-size: cover;
+  background-position: bottom right;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
+.overlay {
   padding: 20px;
-  color: $color;
+  background-color: rgba(0, 0, 0, .27);
+  width: 100%;
 }
 
-.App-title {
-  font-size: 1.5em;
+.flex-elem {
+  width: 100%;
+  margin: 0 auto;
 }
 
-.App-intro {
-  font-size: large;
+.logo-bkg {
+  @extend .flex-elem;
+  max-width: 300px;
+  @media (max-width: $mobile-width) {
+    max-width: 200px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.flex-img, .tutor-btn  {
+  width: 100%;
+  height: auto;
 }
 
-.banner-header {
-  background-image: url(../../assets/images/banner_Image.svg);
-  height: $banner-header-height;
+.intro-text {
+  @extend .flex-elem;
+  letter-spacing: 2px;
+  font-size: 82px;
+  // font-family: $font_main;
+  text-shadow: 1px 4px black;
+  color: #BB5547;
+  max-width: 850px;
+  text-align: center;
+  margin: 87px auto 115px auto;
+  @media (max-width: 768px) {
+    font-size: 45px;
+  }
 }
 
-.banner-header-overlay {
-  position: absolute;
+.text-white {
+  color: white;
+}
+
+.tutor-btn-bkg {
+  @extend .flex-elem;
+  max-width: 422px;
+  .tutor-btn {
+    background-color: $color_deep_brown;
+    height: 90px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 35px;
+    margin-bottom: 92px;
+  }
+  @media (max-width: $mobile-width) {
+    max-width: 250px;
+    .tutor-btn {
+      font-size: 18px;
+      height: 45px;
+    }
+  }
+}
+
+.main {
+  background-color: $color_white;
+  nav{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed $color_dashed_line;
+    padding: 10px 0px 24px 0px;
+
+    .nav-item {
+      text-transform: uppercase;
+      color: $color_menu_item;
+      font-size: 12px;
+      width: 100%;
+      margin: 0px 15px;
+      text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        div {
+          visibility: visible;
+          &::before{
+            width: 150px;
+          }
+        }
+      }
+
+      &::before {
+        content: '+';
+        color: $color_plus_icon;
+        display: inline-block;
+        vertical-align: middle;
+        margin: -3.8px 5px 0px 0px;
+      }
+
+      div {
+        background-color: $color_submenu_bkg;
+        text-transform: none;
+        width: 150px;
+        position: absolute;
+        text-align: left;
+        visibility: hidden;
+        padding-bottom: 10px;
+
+        &::before{
+          content: '';
+          position: absolute;
+          width: 0px;
+          height: 3px;
+          background: #017acd;
+          transition: width .1s ease-in-out;
+        }
+
+        a {
+          display: block;
+          padding: 10px 10px 0px 10px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    nav {
+      display: none;
+    }
+  }
 }

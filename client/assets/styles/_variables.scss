@@ -1,3 +1,14 @@
-$container-width: 80%;
-$banner-header-height: 35rem;
-$color: red;
+@font-face {
+  font-family: 'Maru Gothic';
+  src: url(../fonts/hc.ttf) format('truetype');
+}
+
+$color_deep_brown: #301E16;
+$color_black: #000;
+$color_white: #fff;
+$mobile-width: 768px;
+$color_menu_item: #373737;
+$color_plus_icon: #AE8C79;
+$color_dashed_line: #979797;
+$color_submenu_bkg: #f9f8f8;
+$font_main: 'Maru Gothic';
